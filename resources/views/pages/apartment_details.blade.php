@@ -12,15 +12,15 @@
        
 </section>
 
-<section class="ftco-section ftco-appartment-details bg-light">
+<section class="ftco-section ftco-car-details bg-light">
     <div class="container">
         <div class="row">
-            <div class="col-lx-9 col-lg-9 col-sm-12 mb-4 bg-white rounded" > 
+            <div class="col-lx-9 col-lg-9 col-sm-12 mb-4 bg-white rounded p-6" style="padding: 1px;"> 
             <?php 
             $img = [];
             $img = explode(",", $appartment->photos);
             ?>              
-            <img id=featured class="mt-3 main" src="/storage/photos/{{ $img[0] }}">
+            <img id=featured class="main" src="/storage/photos/{{ $img[0] }}">
 
 			<div id="slide-wrapper">
 			<div class="slide-one-item home-slider owl-carousel" >
@@ -35,8 +35,8 @@
 			</div>
 			</div> 
                       
-    <div class="row">
-        <div class="col-md d-flex align-self-stretch ftco-animate">
+    <div class="row m-auto">
+        <div class="col-md-4 d-flex align-self-stretch ftco-animate">
           <div class="media block-6 services">
             <div class="media-body py-md-4">
                 <div class="d-flex mb-3 align-items-center">
@@ -51,7 +51,8 @@
             </div>
           </div>      
         </div>
-        <div class="col-md d-flex align-self-stretch ftco-animate">
+ 
+        <div class="col-md-4 d-flex align-self-stretch ftco-animate">
           <div class="media block-6 services">
             <div class="media-body py-md-4">
                 <div class="d-flex mb-3 align-items-center">
@@ -66,11 +67,11 @@
             </div>
           </div>      
         </div>
-        <div class="col-md d-flex align-self-stretch ftco-animate">
+        <div class="col-md-4 d-flex align-self-stretch ftco-animate">
           <div class="media block-6 services">
             <div class="media-body py-md-4">
                 <div class="d-flex mb-3 align-items-center">
-                    <div class="icon d-flex align-items-center justify-content-center"><span class="flaticon-appartment" style="color: #d4af37;"></span></div>
+                    <div class="icon d-flex align-items-center justify-content-center"><span class="icon-car" style="color: #d4af37;"></span></div>
                     <div class="text">
                       <h3 class="heading mb-0 pl-3">
                           Parking
@@ -81,7 +82,7 @@
             </div>
           </div>      
         </div>
-        <div class="col-md d-flex align-self-stretch ftco-animate">
+        <div class="col-md-4 d-flex align-self-stretch ftco-animate">
           <div class="media block-6 services">
             <div class="media-body py-md-4">
                 <div class="d-flex mb-3 align-items-center">
@@ -96,7 +97,7 @@
             </div>
           </div>      
         </div>
-        <div class="col-md d-flex align-self-stretch ftco-animate">
+        <div class="col-md-4 d-flex align-self-stretch ftco-animate">
           <div class="media block-6 services">
             <div class="media-body py-md-4">
                 <div class="d-flex mb-3 align-items-center">
@@ -111,11 +112,11 @@
             </div>
           </div>      
         </div>
-        <div class="col-md d-flex align-self-stretch ftco-animate">
+        <div class="col-md-4 d-flex align-self-stretch ftco-animate">
           <div class="media block-6 services">
             <div class="media-body py-md-4">
                 <div class="d-flex mb-3 align-items-center">
-                    <div class="icon d-flex align-items-center justify-content-center" ><span class="flaticon-appartment" style="color: #d4af37;"></span></div>
+                    <div class="icon d-flex align-items-center justify-content-center" ><span class="icon-brush" style="color: #d4af37;"></span></div>
                     <div class="text">
                       <h3 class="heading mb-0 pl-3">
                           Color

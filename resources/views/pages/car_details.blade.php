@@ -15,7 +15,7 @@
 <section class="ftco-section ftco-car-details bg-light">
     <div class="container">
      <div class="row">
-    	<div class="col-lx-9 col-lg-9 col-sm-12 mb-4 bg-white rounded" > 
+    	<div class="col-lx-9 col-lg-9 col-sm-12 mb-4 bg-white rounded" style="padding: 1px;"> 
 			<?php 
 			$img = [];
 			$img = explode(",", $car->photos);
@@ -23,7 +23,7 @@
 <!-- Next and previous buttons -->
 <a class="carousel-control-prev" onclick="plusSlides(-1)">&#10094;</a>
 <a class="carousel-control-next" onclick="plusSlides(1)">&#10095;</a>
-			<img id=featured class="mt-3 main" src="/storage/photos/{{ $img[0] }}">
+			<img id=featured class="main" src="/storage/photos/{{ $img[0] }}">
 
 			<div id="slide-wrapper">
 			<div class="slide-one-item home-slider owl-carousel" >
@@ -38,7 +38,7 @@
 			</div>
 			</div>  
 
-            <div class="row m-auto">
+        <div class="row m-auto">
       		<div class="col-md-4 col-sm-6 d-flex align-self-stretch ftco-animate">
             <div class="media block-6 services">
               <div class="media-body py-md-4">

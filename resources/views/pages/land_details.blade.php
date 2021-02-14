@@ -16,12 +16,12 @@
     <div class="container">
 
    <div class="row">
-    <div class="col-lx-9 col-lg-9 col-sm-12 mb-4 bg-white rounded" > 
+    <div class="col-lx-9 col-lg-9 col-sm-12 mb-4 bg-white rounded" style="padding: 1px;"> 
         <?php 
         $img = [];
         $img = explode(",", $land->photos);
         ?>              
-        <img id=featured class="mt-3 main" src="/storage/photos/{{ $img[0] }}">
+        <img id=featured class="main" src="/storage/photos/{{ $img[0] }}">
 
         <div id="slide-wrapper">
         <div class="slide-one-item home-slider owl-carousel" >

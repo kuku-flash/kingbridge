@@ -11,18 +11,18 @@
        </div>
 </section>
 
-<section class="ftco-section ftco-house_ad-details bg-light">
+<section class="ftco-section ftco-car-details bg-light">
 
     <div class="container">
 
    <div class="row">
-    <div class="col-lx-9 col-lg-9 col-sm-12 mb-4 bg-white rounded" > 
+    <div class="col-lx-9 col-lg-9 col-sm-12 mb-4 bg-white rounded" style="padding: 1px;" > 
           <?php 
             $img = [];
             $img = explode(",", $house_ad->photos);
           ?>
 
-         <img id=featured class="mt-3 main" src="/storage/photos/{{ $img[0] }}">
+         <img id=featured class="main" src="/storage/photos/{{ $img[0] }}">
 
          <div id="slide-wrapper">
          <div class="slide-one-item home-slider owl-carousel" >
@@ -39,98 +39,99 @@
               
      
           
-    <div class="row">
-        <div class="col-md d-flex align-self-stretch ftco-animate">
-          <div class="media block-6 services">
-            <div class="media-body py-md-4">
-                <div class="d-flex mb-3 align-items-center">
-                    <div class="icon d-flex align-items-center justify-content-center"><span class="icon-bed"></span></div>
-                    <div class="text">
-                      <h3 class="heading mb-0 pl-3">
-                          Bedrooms
-                          <span>{{$house_ad->bedroom}}</span>
-                      </h3>
-                  </div>
+         <div class="row m-auto">
+          <div class="col-md-4 d-flex align-self-stretch ftco-animate">
+            <div class="media block-6 services">
+              <div class="media-body py-md-4">
+                  <div class="d-flex mb-3 align-items-center">
+                      <div class="icon d-flex align-items-center justify-content-center"><span class="icon-bed" style="color: #d4af37;"></span></div>
+                      <div class="text">
+                        <h3 class="heading mb-0 pl-3">
+                            Bedrooms
+                            <span>5</span>
+                        </h3>
+                    </div>
+                </div>
               </div>
-            </div>
-          </div>      
-        </div>
-        <div class="col-md d-flex align-self-stretch ftco-animate">
-          <div class="media block-6 services">
-            <div class="media-body py-md-4">
-                <div class="d-flex mb-3 align-items-center">
-                    <div class="icon d-flex align-items-center justify-content-center"><span class="icon-bathtub" style="color: #d4af37;"></span></div>
-                    <div class="text">
-                      <h3 class="heading mb-0 pl-3">
-                          Bathrooms
-                          <span>{{$house_ad->bathroom}}</span>
-                      </h3>
-                  </div>
+            </div>      
+          </div>
+   
+          <div class="col-md-4 d-flex align-self-stretch ftco-animate">
+            <div class="media block-6 services">
+              <div class="media-body py-md-4">
+                  <div class="d-flex mb-3 align-items-center">
+                      <div class="icon d-flex align-items-center justify-content-center"><span class="icon-bathtub" style="color: #d4af37;"></span></div>
+                      <div class="text">
+                        <h3 class="heading mb-0 pl-3">
+                            Bathrooms
+                            <span>5</span>
+                        </h3>
+                    </div>
+                </div>
               </div>
-            </div>
-          </div>      
-        </div>
-        <div class="col-md d-flex align-self-stretch ftco-animate">
-          <div class="media block-6 services">
-            <div class="media-body py-md-4">
-                <div class="d-flex mb-3 align-items-center">
-                    <div class="icon d-flex align-items-center justify-content-center"><span class="flaticon-park" style="color: #d4af37;"></span></div>
-                    <div class="text">
-                      <h3 class="heading mb-0 pl-3">
-                          Parking
-                          <span>{{$house_ad->parking}}</span>
-                      </h3>
-                  </div>
+            </div>      
+          </div>
+          <div class="col-md-4 d-flex align-self-stretch ftco-animate">
+            <div class="media block-6 services">
+              <div class="media-body py-md-4">
+                  <div class="d-flex mb-3 align-items-center">
+                      <div class="icon d-flex align-items-center justify-content-center"><span class="icon-car" style="color: #d4af37;"></span></div>
+                      <div class="text">
+                        <h3 class="heading mb-0 pl-3">
+                            Parking
+                            <span>6</span>
+                        </h3>
+                    </div>
+                </div>
               </div>
-            </div>
-          </div>      
-        </div>
-        <div class="col-md d-flex align-self-stretch ftco-animate">
-          <div class="media block-6 services">
-            <div class="media-body py-md-4">
-                <div class="d-flex mb-3 align-items-center">
-                    <div class="icon d-flex align-items-center justify-content-center"><span class="icon-pets" style="color: #d4af37;"></span></div>
-                    <div class="text">
-                      <h3 class="heading mb-0 pl-3">
-                          Pets
-                          <span>Allowed</span>
-                      </h3>
-                  </div>
+            </div>      
+          </div>
+          <div class="col-md-4 d-flex align-self-stretch ftco-animate">
+            <div class="media block-6 services">
+              <div class="media-body py-md-4">
+                  <div class="d-flex mb-3 align-items-center">
+                      <div class="icon d-flex align-items-center justify-content-center"><span class="icon-pets" style="color: #d4af37;"></span></div>
+                      <div class="text">
+                        <h3 class="heading mb-0 pl-3">
+                            Pets
+                            <span>Allowed</span>
+                        </h3>
+                    </div>
+                </div>
               </div>
-            </div>
-          </div>      
-        </div>
-        <div class="col-md d-flex align-self-stretch ftco-animate">
-          <div class="media block-6 services">
-            <div class="media-body py-md-4">
-                <div class="d-flex mb-3 align-items-center">
-                    <div class="icon d-flex align-items-center justify-content-center"><span class="icon-pool" style="color: #d4af37;"></span></div>
-                    <div class="text">
-                      <h3 class="heading mb-0 pl-3">
-                          Swimming pool 
-                          <span>Available</span>
-                      </h3>
-                  </div>
+            </div>      
+          </div>
+          <div class="col-md-4 d-flex align-self-stretch ftco-animate">
+            <div class="media block-6 services">
+              <div class="media-body py-md-4">
+                  <div class="d-flex mb-3 align-items-center">
+                      <div class="icon d-flex align-items-center justify-content-center"><span class="icon-pool" style="color: #d4af37;"></span></div>
+                      <div class="text">
+                        <h3 class="heading mb-0 pl-3">
+                            Swimming pool 
+                            <span>Available</span>
+                        </h3>
+                    </div>
+                </div>
               </div>
-            </div>
-          </div>      
-        </div>
-        <div class="col-md d-flex align-self-stretch ftco-animate">
-          <div class="media block-6 services">
-            <div class="media-body py-md-4">
-                <div class="d-flex mb-3 align-items-center">
-                    <div class="icon d-flex align-items-center justify-content-center"><span class="flaticon-color" style="color: #d4af37;"></span></div>
-                    <div class="text">
-                      <h3 class="heading mb-0 pl-3">
-                          Color
-                          <span>Black</span>
-                      </h3>
-                  </div>
+            </div>      
+          </div>
+          <div class="col-md-4 d-flex align-self-stretch ftco-animate">
+            <div class="media block-6 services">
+              <div class="media-body py-md-4">
+                  <div class="d-flex mb-3 align-items-center">
+                      <div class="icon d-flex align-items-center justify-content-center" ><span class="icon-brush" style="color: #d4af37;"></span></div>
+                      <div class="text">
+                        <h3 class="heading mb-0 pl-3">
+                            Color
+                            <span>Black</span>
+                        </h3>
+                    </div>
+                </div>
               </div>
-            </div>
-          </div>      
-        </div>
-        </div>
+            </div>      
+          </div>
+          </div>
         <div class="col-md-12 pills">
                       <div class="bd-example bd-example-tabs">
                           <div class="d-flex justify-content-center">
