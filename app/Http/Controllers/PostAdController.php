@@ -172,7 +172,6 @@ class PostAdController extends Controller
 
         $this->validate($request,[
             'title' => 'required',
-            'ads_type' => 'required',
             'real_state_type' => 'required',
             'condition' => 'required',
             'price' => 'required',
@@ -181,8 +180,6 @@ class PostAdController extends Controller
             'square_meters' => 'required',
             'amenities' => 'required',
             'description' => 'required',
-            'category_id' => 'required',
-            'subcategory_id' => 'required',
             'county_id' => 'required',
             'city_id' => 'required',
             'package_id' => 'required',
@@ -193,7 +190,6 @@ class PostAdController extends Controller
 
         
             $apartment_ad->title = $request->title;
-            $apartment_ad->ads_type = $request->ads_type;
             $apartment_ad->real_state_type = $request->real_state_type;
             $apartment_ad->condition = $request->condition;
             $apartment_ad->price = $request->price;
@@ -202,8 +198,6 @@ class PostAdController extends Controller
             $apartment_ad->square_meters = $request->square_meters;
             $apartment_ad->amenities = $request->amenities;
             $apartment_ad->description = $request->description;
-            $apartment_ad->category_id = $request->category_id;
-            $apartment_ad->subcategory_id = $request->subcategory_id;
             $apartment_ad->county_id = $request->county_id;
             $apartment_ad->city_id = $request->city_id;
             $apartment_ad->package_id = $request->package_id;
