@@ -481,7 +481,7 @@
           //console.log(data.length);
           op+='<option value="0" selected disabled>Choose Model </option>';
           for(var i=0;i<data.length;i++){
-          op+='<option value="'+data[i].model+'">'+data[i].model+'</option>';
+          op+='<option value="'+data[i].id+'">'+data[i].model+'</option>';
            }
 
            div.find('.model').html(" ");

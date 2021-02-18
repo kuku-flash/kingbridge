@@ -25,10 +25,10 @@ class Car_ad extends Model
         return $this->belongsTo('App\Package');
     }
     public function car_make () {
-        return $this->belongsTo('App\Car_make');
+        return $this->belongsTo('App\Car_make', 'make');
     }
     public function car_model () {
-        return $this->belongsTo('App\Car_model');
+        return $this->belongsTo('App\Car_model', 'model');
     }
 
 

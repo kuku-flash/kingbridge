@@ -25,11 +25,9 @@
   <div class="form-group">
 	<select class="form-control  @error('make') is-invalid  @enderror" name="make" >
 		<option value="">Choose your Make </option>
-			<option>Audi</option>
-			<option>Toyota</option>
-			<option>Benz</option>
-			<option>Lamborghini</option>
-			<option>Subaru</option>
+		@foreach ($cars as $car)
+		<option value="{{$car->make}}}">{{$car->car_make->make}}</option>
+		@endforeach
 			
 			
 	</select>
