@@ -93,10 +93,14 @@
             	<p class=""> <h4 class="mb-0"> KSh {{$land->price}} </h4>  <span> REF-ID:{{$land->id}}</span> </p>
             </div>
 			<div class="mb-4 p-4 text-center bg-white rounded">
-				<p>
-					<img src="/storage/users-avatar/{{$land->user->avatar}}" alt="Avatar" class="avatar">
+        <p>
+					@if ($land->user->name)
+						<img src="{{ $land->user->avatar }}" alt="Avatar" class="avatar">
+					@else
+						<img src="/storage/users-avatar/{{ $land->user->avatar }}" alt="Avatar" class="avatar">
+					@endif
 				</p>
-				 <p> <h3 class="h5 text-black mb-0">{{$land->user->firstname}} {{$land->user->secondname}}</h3>
+				 <p> <h3 class="h5 text-black mb-0">{{$land->user->name}} {{$land->user->firstname}} {{$land->user->secondname}}</h3>
 				<small class="mt-1"><i class="icon-verified_user"> </i>Verified</small> </p> 
 
 				 <p> <a href="#" class="text-dark" >View profile</a></p>

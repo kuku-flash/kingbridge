@@ -201,14 +201,18 @@
             </div>
 			<div class="mb-4 p-4 text-center bg-white rounded">
 				<p>
-					<img src="/storage/users-avatar/{{$car->user->avatar}}" alt="Avatar" class="avatar">
+					@if ($car->user->name)
+						<img src="{{ $car->user->avatar }}" alt="Avatar" class="avatar">
+					@else
+						<img src="/storage/users-avatar/{{ $car->user->avatar }}" alt="Avatar" class="avatar">
+					@endif
 				</p>
-				 <p> <h3 class="h5 text-black mb-0">{{$car->user->firstname}} {{$car->user->secondname}}</h3>
+				 <p> <h3 class="h5 text-black mb-0">{{$car->user->name}} {{$car->user->firstname}} {{$car->user->secondname}}</h3>
 				<small class="mt-1"><i class="icon-verified_user"> </i>Verified</small> </p> 
 
 				 <p> <a href="#" class="text-dark" >View profile</a></p>
 
-				 <p><a href="#" class="btn btn-primary py-2 mr-1 w-100"><i class="icon-chat"> </i>Chat</a> </p>	
+				 <p><a href="{{ route('chatify')}}" class="btn btn-primary py-2 mr-1 w-100"><i class="icon-chat"> </i>Chat</a> </p>	
 				
 
 				<p> {{$car->user->email}} <a href="#" class="btn btn-primary py-2 mr-1 w-100"><i class="icon-message "></i>SEND EMAIL</a> </p>	

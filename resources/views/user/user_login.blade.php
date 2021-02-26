@@ -34,14 +34,26 @@
                     </span>
                     @enderror
       </div>
+      <div class="form-group">
+      <div class="col-md-6">
                 <span>
                     <input type="checkbox" class="checkbox">
                         Keep me signed in
                 </span>
+      </div>
+      <div class="col-md-6">
           <button type="submit" class="btn btn-default w-50 ml-auto">Login</button>
+      </div>
+      </div>
 </form>
 
               </div>
+              <div class="form-group">
+                <div class="col-md-6 offset-md-3">
+                    <a href="{{route('login.google')}}" class="btn btn-danger">Login with Google</a>
+                    <a href="{{route('login.facebook')}}" class="btn btn-info">Login with Facebook</a>
+                </div>
+            </div>
             </div>
         </div>
       </div>

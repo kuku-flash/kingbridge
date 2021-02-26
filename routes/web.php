@@ -69,6 +69,11 @@ Auth::routes();
 Route::get('/admin/login', 'Admin\AdminsLoginController@loginForm')->name('admin.login');
 Route::post('/admin/login', 'Admin\AdminsLoginController@login')->name('admin.login');
 
+Route::get('/login/google', [App\Http\Controllers\Auth\LoginController::class, 'redirectToGoogle'])->name('login.google');
+Route::get('/login/google/callback', [App\Http\Controllers\Auth\LoginController::class, 'handleGoogleCallback']);
+
+Route::get('/login/facebook', [App\Http\Controllers\Auth\LoginController::class, 'redirectToFacebook'])->name('login.facebook');
+Route::get('/login/facebook/callback', [App\Http\Controllers\Auth\LoginController::class, 'handleFacebookCallback']);
 
 
 Route::group(['middleware' => ['auth:admin'], 'prefix' => 'admin', 'namespace' => 'Admin'], function () {

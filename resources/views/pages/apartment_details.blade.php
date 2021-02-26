@@ -187,10 +187,14 @@
             	<p class=""> <h4 class="mb-0"> KSh {{$appartment->price}} </h4>  <span> REF-ID:{{$appartment->id}}</span> </p>
             </div>
 			<div class="mb-4 p-4 text-center bg-white rounded">
-				<p>
-					<img src="/storage/users-avatar/{{$appartment->user->avatar}}" alt="Avatar" class="avatar">
+        <p>
+					@if ($appartment->user->name)
+						<img src="{{ $appartment->user->avatar }}" alt="Avatar" class="avatar">
+					@else
+						<img src="/storage/users-avatar/{{ $appartment->user->avatar }}" alt="Avatar" class="avatar">
+					@endif
 				</p>
-				 <p> <h3 class="h5 text-black mb-0">{{$appartment->user->firstname}} {{$appartment->user->secondname}}</h3>
+				 <p> <h3 class="h5 text-black mb-0">{{$appartment->user->name}} {{$appartment->user->firstname}} {{$appartment->user->secondname}}</h3>
 				<small class="mt-1"><i class="icon-verified_user"> </i>Verified</small> </p> 
 
 				 <p> <a href="#" class="text-dark" >View profile</a></p>

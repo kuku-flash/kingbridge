@@ -17,7 +17,7 @@
     <div class="overlay"></div>
 <div class="container">
     <div class="row">
-        <div class="col-lg-6 m-auto">
+        <div class="col-lg-6">
             <div class="card">
               <div class="card-body">
 
@@ -34,7 +34,7 @@
           </div>
 
           <div class="form-group" >
-            <label class="label-control mb-1">second Name</label>
+            <label class="label-control mb-1">Last Name</label>
             <input type="tex" name="secondname" class="form-control  @error('secondname') is-invalid  @enderror">
               @error('secondname')
               <span class="invalid-feedback" role="alert">
@@ -87,9 +87,7 @@
 
                 </div>
             </div>
-        </div>
-
-        
+        </div>>
     </div>
 </div>
 </section>

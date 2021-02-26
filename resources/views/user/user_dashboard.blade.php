@@ -21,7 +21,12 @@
                   <div class="mb-4 p-2 text-center bg-white rounded">
                       
                        <p> <div class="avatar">
-                          <img src="/storage/users-avatar/{{ Auth::user()->avatar }}" alt="Avatar" class="avatar">
+                           @if (Auth::user()->name)
+                           <img src="{{ Auth::user()->avatar }}" alt="Avatar" class="avatar">
+                           @else
+                           <img src="/storage/users-avatar/{{ Auth::user()->avatar }}" alt="Avatar" class="avatar">
+                           @endif
+                      
                       </div> <a href="#" class="text-dark" >View profile</a></p>
       
                        <p><a href="#" class="btn btn-primary py-2 mr-1 w-100"><i class="icon-cog"> </i>Dashbord</a> </p>	

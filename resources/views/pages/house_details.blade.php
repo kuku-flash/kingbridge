@@ -190,9 +190,13 @@
             </div>
 			<div class="mb-4 p-4 text-center bg-white rounded">
 				<p>
-					<img src="/storage/users-avatar/{{$house_ad->user->avatar}}" alt="Avatar" class="avatar">
+					@if ($house_ad->user->name)
+						<img src="{{ $house_ad->user->avatar }}" alt="Avatar" class="avatar">
+					@else
+						<img src="/storage/users-avatar/{{ $house_ad->user->avatar }}" alt="Avatar" class="avatar">
+					@endif
 				</p>
-				 <p> <h3 class="h5 text-black mb-0">{{$house_ad->user->firstname}} {{$house_ad->user->secondname}}</h3>
+				 <p> <h3 class="h5 text-black mb-0">{{$house_ad->user->name}} {{$house_ad->user->firstname}} {{$house_ad->user->secondname}}</h3>
 				<small class="mt-1"><i class="icon-verified_user"> </i>Verified</small> </p> 
 
 				 <p> <a href="#" class="text-dark" >View profile</a></p>
