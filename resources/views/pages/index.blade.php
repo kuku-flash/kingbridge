@@ -413,62 +413,49 @@
     		<div class="row">
     			<div class="col-md-12">
     				<div class="carousel-car owl-carousel">
+					
+    				
+						@foreach ($cars as $car)
+							
+				
     					<div class="item">
-    						<div class="car-wrap rounded ftco-animate">
-		    					<div class="img rounded d-flex align-items-end" style="background-image: url(images/car1.jpg);">
-		    					</div>
-		    					<div class="text">
-		    						<h2 class="mb-0"><a href="#">BMW i8</a></h2>
-		    						<div class="d-flex mb-3">
-			    						<span class="cat">BMW</span>
-			    						<p class="price ml-auto">Ksh 20 Million <span>Negotiable</span></p>
-		    						</div>
-		    						<p class="d-flex mb-0 d-block"><a href="#" class="btn btn-primary py-2 mr-1">Buy now</a> <a href="#" class="btn btn-secondary py-2 ml-1">Details</a></p>
-		    					</div>
-		    				</div>
+							<a href="{{ route('car_details', $car->id)}}">
+								<div class="single-property-area wow fadeInUp" data-wow-delay="200ms" style="visibility: visible; animation-delay: 200ms; animation-name: fadeInUp;">
+									<div class="card car-wrap rounded ftco-animate">
+									  <div class="property-thumb">
+									<div class="img rounded d-flex align-items-end" style="background-image: url(/storage/photos/{{ strtok($car->photos,',') }} " ;></a>
+									  </div>
+									  </div>
+									<div class="property-desc-area">
+									<div class="property-title-seller d-flex justify-content-between">
+									  
+									<div class="property-title">
+									<h5>{{ $car->title}}</h5>
+									<span class="cat">{{ $car->car_make->make}}</span>
+									<p><i class="fa fa-map-marker" aria-hidden="true"> </i> {{$car->county->county_name}},{{$car->city->city}}</p>
+									</div>
+									</div>
+									
+									<div class="property-info-area d-flex flex-wrap">
+									<p>Engine Size <span>2.5L</span></p>
+									<p>Transmission <span>{{$car->transmission}}</span></p>
+									<p>Mileage <span>{{$car->mileage}}Km</span></p>
+									<p>Fuel Type <span>{{$car->fuel_type}}</span></p>
+									<p>Year <span>2015</span></p>
+									<p>Body Type <span>Saloon</span></p>
+									</div>
+									</div>
+									
+									<div class="property-price">
+									<p class="badge-sale">For Sale</p>
+									<p class="price">Ksh{{ $car->price }}</p></a>
+									</div>
+									</div>
+									</div>
+							</a>
     					</div>
-    					<div class="item">
-    						<div class="car-wrap rounded ftco-animate">
-		    					<div class="img rounded d-flex align-items-end" style="background-image: url(images/car2.jpg);">
-		    					</div>
-		    					<div class="text">
-		    						<h2 class="mb-0"><a href="#">Aston Martin DB9</a></h2>
-		    						<div class="d-flex mb-3">
-			    						<span class="cat">Aston Martin</span>
-			    						<p class="price ml-auto">Ksh 10 Million <span>Negotiable</span></p>
-		    						</div>
-		    						<p class="d-flex mb-0 d-block"><a href="#" class="btn btn-primary py-2 mr-1">Buy now</a> <a href="#" class="btn btn-secondary py-2 ml-1">Details</a></p>
-		    					</div>
-		    				</div>
-    					</div>
-    					<div class="item">
-    						<div class="car-wrap rounded ftco-animate">
-		    					<div class="img rounded d-flex align-items-end" style="background-image: url(images/car3.jpg);">
-		    					</div>
-		    					<div class="text">
-		    						<h2 class="mb-0"><a href="#">Mercedes Benz E300</a></h2>
-		    						<div class="d-flex mb-3">
-			    						<span class="cat">Mercedes Benz</span>
-			    						<p class="price ml-auto">Ksh 3 Million <span>Negotiable</span></p>
-		    						</div>
-		    						<p class="d-flex mb-0 d-block"><a href="#" class="btn btn-primary py-2 mr-1">Book now</a> <a href="#" class="btn btn-secondary py-2 ml-1">Details</a></p>
-		    					</div>
-		    				</div>
-    					</div>
-    					<div class="item">
-    						<div class="car-wrap rounded ftco-animate">
-		    					<div class="img rounded d-flex align-items-end" style="background-image: url(images/car4.jpg);">
-		    					</div>
-		    					<div class="text">
-		    						<h2 class="mb-0"><a href="#">Rolls Roys Ghost</a></h2>
-		    						<div class="d-flex mb-3">
-			    						<span class="cat">Rolls Roys </span>
-			    						<p class="price ml-auto">Ksh 30 Million <span>Negotiable</span></p>
-		    						</div>
-		    						<p class="d-flex mb-0 d-block"><a href="#" class="btn btn-primary py-2 mr-1">Buy now</a> <a href="#" class="btn btn-secondary py-2 ml-1">Details</a></p>
-		    					</div>
-		    				</div>
-    					</div>
+						@endforeach
+    				
     				</div>
     			</div>
     		</div>

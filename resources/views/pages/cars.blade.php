@@ -152,7 +152,7 @@
                 <div class="single-property-area wow fadeInUp" data-wow-delay="200ms" style="visibility: visible; animation-delay: 200ms; animation-name: fadeInUp;">
                 <div class="card car-wrap rounded ftco-animate">
                   <div class="property-thumb">
-                <div class="img rounded d-flex align-items-end" style="background-image: url(/storage/photos/{{ strtok($ad->photos, ',') }} " ;></a>
+                <div class="img rounded d-flex align-items-end" style="background-image: url(/storage/photos/{{ strtok($ad->photos,',') }} " ;></a>
                   </div>
                   </div>
                 <div class="property-desc-area">

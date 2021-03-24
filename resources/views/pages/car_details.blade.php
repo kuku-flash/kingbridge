@@ -21,8 +21,7 @@
 			$img = explode(",", $car->photos);
 			?>
 <!-- Next and previous buttons -->
-<a class="carousel-control-prev" onclick="plusSlides(-1)">&#10094;</a>
-<a class="carousel-control-next" onclick="plusSlides(1)">&#10095;</a>
+
 			<img id=featured class="main" src="/storage/photos/{{ $img[0] }}">
 
 			<div id="slide-wrapper">
@@ -30,7 +29,9 @@
 			<div id="slider">
 				<ul class="thumbs mt-3">	
 					@foreach ($img as $i)
+					<a href="/storage/photos/{{ $i}}" class="image-popup">
 					<img class="thumbnail thumb-img" src="/storage/photos/{{ $i}}">
+					</a>
 					@endforeach
 				</ul>
 
@@ -220,7 +221,7 @@
 
 				<p>
 				<p> <span><i class="icon-location-arrow mt-1"></i> {{$car->county->county_name}}-{{$car->city->city}}</span> </p>	
-				<p> <span><i class="icon-timer"></i> Posted 2hrs ago</span> </p>	
+				<p> <span><i class="icon-timer"></i> Posted {{$car->created_at->diffForHumans()}}</span> </p>	
 				<p> <span><i class="icon-eye"></i> 123 ad views</span> </p>	
 				</p>
 
