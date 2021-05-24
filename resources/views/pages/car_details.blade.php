@@ -213,14 +213,14 @@
 
 				 <p> <a href="#" class="text-dark" >View profile</a></p>
 
-				 <p><a href="{{ route('chatify')}}" class="btn btn-primary py-2 mr-1 w-100"><i class="icon-chat"> </i>Chat</a> </p>	
+				 <p><a href="#" class="btn btn-primary py-2 mr-1 w-100"><i class="icon-chat"> </i>Chat</a> </p>	
 				
 
 				<p> {{$car->user->email}} <a href="#" class="btn btn-primary py-2 mr-1 w-100"><i class="icon-message "></i>SEND EMAIL</a> </p>	
 				<p> {{$car->user->phone_number}} <a href="#" class="btn btn-primary py-2 mr-1 w-100"><i class="icon-phone"> </i>CALL</a> </p>	
 
 				<p>
-				<p> <span><i class="icon-location-arrow mt-1"></i> {{$car->county->county_name}}-{{$car->city->city}}</span> </p>	
+				<p> <span><i class="icon-location-arrow mt-1"></i> {{$car->city->county->county_name}}-{{$car->city->city}} </span> </p>	
 				<p> <span><i class="icon-timer"></i> Posted {{$car->created_at->diffForHumans()}}</span> </p>	
 				<p> <span><i class="icon-eye"></i> 123 ad views</span> </p>	
 				</p>

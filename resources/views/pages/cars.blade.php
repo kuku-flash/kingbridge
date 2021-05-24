@@ -161,7 +161,7 @@
                 <div class="property-title">
                 <h5><a href="{{ route('car_details', $ad->id)}}">{{ $ad->title}}</a></h5>
                 <span class="cat">{{ $ad->car_make->make}}</span>
-                <p><i class="fa fa-map-marker" aria-hidden="true"> </i> {{$ad->county->county_name}},{{$ad->city->city}}</p>
+                <p><i class="fa fa-map-marker" aria-hidden="true"> </i> {{$ad->city->county->county_name}},{{$ad->city->city}}</p>
                 </div>
                 </div>
                 

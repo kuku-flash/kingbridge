@@ -24,9 +24,10 @@
 
 <br>
 
-<section>
+<section class= "ftco-section ">
 
-<div class="checkout-row">
+  
+<div class="container">
 <div class="col-75">
   <div class="checkout-container">
     <form action="/action_page.php">
@@ -54,7 +55,7 @@
         <div class="col-50">
           <h3>Payment</h3>
           <label for="fname">Accepted Method</label>
-          <div class="mpesa-img" style="background-image:url('images/M-Pesa-01.svg');"></div>
+          <div class="mpesa-img" style="background-image:url('{{ asset('images/M-Pesa-01.svg')}}');"></div>
           <label for="cname">Name on Mpesa</label>
           <input type="text" id="cname" name="cardname" placeholder="Joshua Mungai">
           <label for="ccnum">Phone number</label>
@@ -73,15 +74,11 @@
         </div>
 
       </div>
-      <label>
-        <input type="checkbox" checked="checked" name="sameadr"> Invoice shall be send/attatched to your phone/email after Ad review.
-      </label>
-      <input type="submit" value="Continue to checkout" class="btn">
-    </form>
+   
   </div>
 </div>
 
-<div class="col-25">
+<div class="col-25 mt-3">
   <div class="checkout-container">
     <h4>Cart 
       <span class="price" style="color:black">
@@ -96,6 +93,12 @@
     <p>Total <span class="price" style="color:black"><b>Ksh 6500</b></span></p>
   </div>
 </div>
+
+<label>
+  <input type="checkbox" checked="checked" name="sameadr"> Invoice shall be send/attatched to your phone/email after Ad review.
+</label>
+<input type="submit" value="Continue to checkout" class="btn">
+</form>
 </div>
 </section>
 

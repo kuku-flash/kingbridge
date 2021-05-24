@@ -199,8 +199,8 @@
           <select name="condition" class="form-control  @error('condition') is-invalid  @enderror">
             <option value="">condition</option>
 
-            <option>1</option>
-            <option>2</option>
+            <option>good</option>
+            <option>bad</option>
 
 
           </select>
